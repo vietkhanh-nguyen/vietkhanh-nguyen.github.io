@@ -47,7 +47,7 @@ layout: default
       <section class="page__content" itemprop="text">
         {{ content }}
 
-        {% if page.citation and page.paperurl and page.slidesurl and page.bibtexurl %}
+        <!-- {% if page.citation and page.paperurl and page.slidesurl and page.bibtexurl %}
           <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.paperurl }}">Download Paper</a> | <a href="{{ page.slidesurl }}">Download Slides</a> | <a href="{{ page.bibtexurl }}">Download Bibtex</a></p>
         {% elsif page.citation and page.paperurl and page.slidesurl %}
           <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.paperurl }}">Download Paper</a> | <a href="{{ page.slidesurl }}">Download Slides</a></p>
@@ -67,12 +67,31 @@ layout: default
           <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.bibtexurl }}">Download Bibtex</a></p>
         {% elsif page.citation %}
           <p style="font-size: smaller">Recommended citation: {{ page.citation }}</p>
+
         {% elsif page.slidesurl %}
           <p style="font-size: smaller"><a href="{{ page.slidesurl }}">Download Slides</a></p>
         {% elsif page.bibtexurl %}
           <p style="font-size: smaller"><a href="{{ page.bibtexurl }}">Download Bibtex</a></p>
+        {% endif %} -->
+
+
+        {% if page.citation %}
+          <p style="font-size: smaller">Recommended citation: {{ page.citation }}</p>
         {% endif %}
 
+        <p style="font-size: smaller">
+          {% if page.paperurl %}
+            <a href="{{ page.paperurl }}">📄 Download Paper</a>
+          {% endif %}
+          {% if page.slidesurl %}
+            {% if page.paperurl %} | {% endif %}
+            <a href="{{ page.slidesurl }}">📝 View Slides</a>
+          {% endif %}
+          {% if page.bibtexurl %}
+            {% if page.paperurl or page.slidesurl %} | {% endif %}
+            <a href="{{ page.bibtexurl }}">📑 Download BibTeX</a>
+          {% endif %}
+        </p>
         {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
 

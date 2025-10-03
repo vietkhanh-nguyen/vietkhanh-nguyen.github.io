@@ -23,7 +23,7 @@ repository               : "vietkhanh-nguyen/vietkhanh-nguyen.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "profile.jpg"
   name             : "Nguyen Viet Khanh"
   pronouns         : # example: "she/her"  
   bio              : "Hello, I am currently a Master’s student. I am passionate about advancing my knowledge in my field. I plan to pursue a PhD after completing my Master’s degree. My long-term goal is to contribute to innovative research and development. Eventually, I hope to apply my expertise in the industry’s R&D sector."

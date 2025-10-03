@@ -8,12 +8,14 @@ redirect_from:
 ---
 
 {% include base_path %}
+{% include toc %}
 
 Education
 ======
-* M.S. in Smart Aerospace and Autonomous System, Université Évry Paris-Saclay, 2025 - Present
-  * Scholarship: IDEX
-* B.S. in Control Engineering and Automation, Hanoi University of Science and Technology (HUST), 2021 - 2025
+* Master 2 in Smart Aerospace and Autonomous System, Université Évry Paris-Saclay, 2025 - Present
+  * Cumulative GPA: *incoming*
+  * Scholarship: Universite Paris Saclay IDEX
+* Bachelor in Control Engineering and Automation, Hanoi University of Science and Technology (HUST), 2021 - 2025
   * Cumulative GPA: 3.72/4.0
   * Ranking: 43/478
   * Best Thesis Defense Award

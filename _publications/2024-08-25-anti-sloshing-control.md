@@ -5,9 +5,9 @@ category: manuscripts
 permalink: /publication/2025-iet-flateness-sloshing
 excerpt: "This paper proposes a flatness-based trajectory planning and tracking control method with an integrated extended state observer to suppress liquid sloshing."
 date: 2024-08-25
-venue: "IET Cyber-Systems and Robotics (SCIE Q2)"
+venue: "IET Cyber-Systems and Robotics (SCIE Q3)"
 paperurl: "https://doi.org/10.1049/csy2.12121"
-slidesurl: 'http://academicpages.github.io/files/slides3.pdf'
+# slidesurl: 'http://academicpages.github.io/files/slides3.pdf'
 # citation: ''
 ---
 

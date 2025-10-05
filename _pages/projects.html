@@ -12,9 +12,11 @@ author_profile: true
   <p class="cv-last-updated">
     <strong>Last updated:</strong> <span id="last-updated"></span>
     {% if site.author.github %}
-      - You can also find my projects on <a href="{{ site.author.github }}">my GitHub profile</a>.
+      - You can also find my projects on 
+        <a href="https://github.com/{{ site.author.github }}" target="_blank">my GitHub profile</a>.
     {% endif %}
   </p>
+
 
   <!-- Render projects by category -->
   {% if site.project_category %}

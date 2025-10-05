@@ -10,6 +10,12 @@ redirect_from:
 
 <div class="cv-container">
 
+
+  <!-- Last Updated -->
+  <p class="publications-last-updated">
+    <strong>Last updated:</strong> <span id="last-updated"></span>
+  </p>
+
   {% capture written_year %}'None'{% endcapture %}
 
   {% for post in site.posts %}
@@ -92,3 +98,12 @@ body.dark .publication-separator {
   margin-bottom: 1rem;
 }
 </style>
+
+<script>
+  const lastUpdatedElem = document.getElementById('last-updated');
+  if (lastUpdatedElem) {
+    const lastModified = new Date(document.lastModified);
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    lastUpdatedElem.textContent = lastModified.toLocaleDateString(undefined, options);
+  }
+</script>

@@ -1,0 +1,139 @@
+---
+layout: archive
+title: "Curriculum Vitae"
+permalink: /cv/
+author_profile: true
+redirect_from:
+  - /resume
+---
+<!-- cv.html -->
+<div class="cv-container">
+  <h2>Languages</h2>
+  <ul>
+    <li><strong>English</strong> (IELTS 7.0)</li>
+    <li><strong>French</strong> (Beginner)</li>
+  </ul>
+
+  <h2>Education</h2>
+  <ul>
+    <li>
+      <strong>Master 2 in Smart Aerospace and Autonomous System</strong>, 
+      <em>Université Paris-Saclay</em>, 2025 - Present
+      <ul>
+        <li>Cumulative GPA: <em>incoming</em></li>
+        <li>Scholarship: <strong>Université Paris Saclay IDEX</strong></li>
+      </ul>
+    </li>
+    <li>
+      <strong>Bachelor in Control Engineering and Automation</strong>, 
+      <em>Hanoi University of Science and Technology (HUST)</em>, 2021 - 2025
+      <ul>
+        <li>Cumulative GPA: <strong>3.72/4.0</strong></li>
+        <li>Ranking: <strong>43/478</strong></li>
+        <li><strong>Best Thesis Defense Award</strong></li>
+        <li><strong>Student Research Conference (HUST)</strong>: 2nd Place (2025), 3rd Place (2024)</li>
+        <li>Scholarship: <strong>VATM Excellent Student Scholarship</strong></li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2>Work Experience</h2>
+  <ul>
+    <li>
+      <strong>Jul 2022 - Aug 2025</strong>: <strong>Research Student</strong>, 
+      <em>Motion Control and Applied Robotics (MoCAR) Lab</em>, Hanoi University of Science and Technology - Hanoi, Vietnam
+      <ul>
+        <li>Supervised by: <strong><a href="mailto:lam.nguyentung@hust.edu.vn">Assoc.Prof. Tung Lam Nguyen</a></strong> & <strong><a href="mailto:anh.nguyenthivan1@hust.edu.vn">Dr. Thi-Van-Anh Nguyen</a></strong></li>
+        <li>Research direction: <em>Anti-sloshing project for nonlinear liquid sloshing cylindrical containers; Simulation for robotic systems</em></li>
+        <li>Skills: Concrete background in <strong>control theory</strong>, <strong>motion control</strong>, <strong>optimization</strong>. Experienced in <strong>MATLAB</strong> (control algorithm development, numerical computation), <strong>C/C++</strong> (embedded systems), <strong>Simulink</strong> (system & control validation); scientific research, academic writing (<em>LaTeX</em>), and presenting technical results at international conferences. <strong>MuJoCo</strong> for physical simulation.</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Feb 2025 - Jun 2025</strong>: <strong>Internship Student</strong>, 
+      <em>Computational Intelligence and Robotics Lab</em>, National Taiwan Normal University - Taipei, Taiwan
+      <ul>
+        <li>Supervised by: <strong><a href="mailto:jhsu@ntnu.edu.tw">Prof. Chen-Chien Hsu</a></strong></li>
+        <li>Research direction: <em>Multi-objective crowd-aware robot navigation using deep reinforcement learning</em></li>
+        <li>Skills: <strong>Deep learning algorithms</strong>, <strong>reinforcement learning</strong> and <strong>evolutionary computation</strong>. <strong>Python</strong> for developing model and algorithm. <strong>ROS</strong> for simulation of robots. Adaptability in international environments.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <!-- Last Updated -->
+  <p class="cv-last-updated">
+    <strong>Last updated:</strong> <span id="last-updated"></span>
+  </p>
+
+</div>
+
+<style>
+/* CV container general styling */
+.cv-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  line-height: 1.6;
+}
+
+/* Light theme */
+body.light .cv-container {
+  background-color: #ffffff;
+  color: #111111;
+  border: 1px solid #d1d5db;
+}
+
+/* Dark theme */
+body.dark .cv-container {
+  background-color: #0f1724;
+  color: #e6eef8;
+  border: 1px solid #1f2937;
+}
+
+/* Links */
+.cv-container a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+/* Heading styling */
+.cv-container h2 {
+  border-bottom: 3px solid currentColor;
+  padding-bottom: 0.3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+/* Lists inside CV */
+.cv-container ul {
+  padding-left: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.cv-container li ul {
+  padding-left: 1rem;
+  margin-top: 0.2rem;
+}
+
+/* Bold & italic inside li */
+.cv-container li strong {
+  font-weight: 600;
+}
+
+.cv-container li em {
+  font-style: italic;
+}
+</style>
+
+
+<script>
+  // Ensure this runs after the element is in the DOM
+  const lastUpdatedElem = document.getElementById('last-updated');
+  if (lastUpdatedElem) {
+    const lastModified = new Date(document.lastModified);
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    lastUpdatedElem.textContent = lastModified.toLocaleDateString(undefined, options);
+  }
+</script>

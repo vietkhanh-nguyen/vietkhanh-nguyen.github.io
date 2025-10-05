@@ -1,12 +1,15 @@
 {% include base_path %}
-
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
-        <button><div class="navicon"></div></button>
+      <nav id="site-nav">
         <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg persist"><a href="{{ base_path }}/">{{ site.title }}</a></li>
+          <!-- Site title -->
+          <li class="masthead__menu-item masthead__menu-item--lg persist">
+            <a href="{{ base_path }}/">{{ site.title }}</a>
+          </li>
+
+          <!-- Navigation links -->
           {% for link in site.data.navigation.main %}
             {% if link.url contains 'http' %}
               {% assign domain = '' %}
@@ -15,12 +18,72 @@
             {% endif %}
             <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
           {% endfor %}
+
+          <!-- Theme toggle -->
           <li id="theme-toggle" class="masthead__menu-item persist tail">
-            <a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
+            <a role="button" aria-labelledby="theme-icon">
+              <i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i>
+            </a>
           </li>
         </ul>
-        <ul class="hidden-links hidden"></ul>
       </nav>
     </div>
   </div>
 </div>
+
+<style>
+/* Sticky navbar */
+.masthead {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  padding-top: 0;
+}
+
+.masthead__inner-wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0.8rem 1rem;
+}
+
+.masthead__menu nav#site-nav .visible-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.masthead__menu-item.persist.masthead__menu-item--lg {
+  margin-right: auto;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.masthead__menu-item.tail {
+  margin-left: 1rem;
+}
+
+/* Define CSS variables for navbar text color */
+body.light-theme {
+  --navbar-text-color: #000000; /* black for light theme */
+}
+
+body.dark-theme {
+  --navbar-text-color: #ffffff; /* white for dark theme */
+}
+
+/* Apply CSS variable to all navbar links */
+nav#site-nav .visible-links li.masthead__menu-item a {
+  color: var(--navbar-text-color) !important;
+  text-decoration: none;
+}
+
+/* Optional hover effect */
+nav#site-nav .visible-links li.masthead__menu-item a:hover {
+  opacity: 0.8;
+  transition: 0.2s;
+}
+</style>

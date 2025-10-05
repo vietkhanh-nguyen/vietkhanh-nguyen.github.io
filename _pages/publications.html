@@ -4,33 +4,145 @@ title: "Publications"
 permalink: /publications/
 author_profile: true
 ---
-
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
-
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
+<div class="cv-container">
+
+
+  <!-- Render publications -->
+  {% if site.publication_category %}
+    {% for category in site.publication_category %}
+      {% assign title_shown = false %}
+      {% assign category_posts = site.publications | where: "category", category[0] | reverse %}
+      {% assign last_index = category_posts.size | minus: 1 %}
+      
+      {% for post in category_posts %}
+        {% unless title_shown %}
+          <h2 class="publication-title">{{ category[1].title }}</h2>
+          {% assign title_shown = true %}
+        {% endunless %}
+
+        {% include archive-single.html %}
+
+        {% if forloop.index0 != last_index %}
+          <hr class="publication-separator" />
+        {% endif %}
+      {% endfor %}
     {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+  {% endif %}
 
+  <!-- Last Updated -->
+  <p class="cv-last-updated">
+    <strong>Last updated:</strong> <span id="last-updated"></span>
+  {% if site.author.googlescholar %}
+   - You can also find my articles on <a href="{{ site.author.googlescholar }}">my Google Scholar profile</a>.
+  {% endif %}
+  </p>
 
+</div>
 
+<style>
+/* Reuse CV container styling */
+.cv-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  line-height: 1.6;
+}
+
+/* Light theme */
+body.light .cv-container {
+  background-color: #ffffff;
+  color: #111111;
+  border: 1px solid #d1d5db;
+}
+
+/* Dark theme */
+body.dark .cv-container {
+  background-color: #0f1724;
+  color: #e6eef8;
+  border: 1px solid #1f2937;
+}
+
+/* Links */
+.cv-container a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+/* Heading styling */
+.cv-container h2 {
+  /* border-bottom: 3px solid currentColor; */
+  padding-bottom: 0.3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+/* Lists inside publications */
+.cv-container ul {
+  padding-left: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.cv-container li ul {
+  padding-left: 1rem;
+  margin-top: 0.2rem;
+}
+
+/* Bold & italic inside li */
+.cv-container li strong {
+  font-weight: 600;
+}
+
+.cv-container li em {
+  font-style: italic;
+}
+
+/* Publication specific styling */
+.publication-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-top: 1.5rem;
+  margin-bottom: 0.3rem;
+  border-bottom: 3px solid currentColor;
+  padding-bottom: 0.2rem;
+}
+
+.publication-separator {
+  border: none;
+  border-bottom: 3px dashed #ccc;
+  margin: 0.5rem 0 1rem 0;
+}
+
+body.dark-mode .publication-title {
+  border-color: #f2f5fa;
+}
+
+body.dark-mode .publication-separator {
+  border-color: #555;
+}
+
+.wordwrap {
+  margin-bottom: 1rem;
+}
+
+.cv-container a {
+  color: #007acc;
+}
+
+body.dark-mode .cv-container a {
+  color: #66c0f4;
+}
+</style>
+
+<script>
+  const lastUpdatedElem = document.getElementById('last-updated');
+  if (lastUpdatedElem) {
+    const lastModified = new Date(document.lastModified);
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    lastUpdatedElem.textContent = lastModified.toLocaleDateString(undefined, options);
+  }
+</script>

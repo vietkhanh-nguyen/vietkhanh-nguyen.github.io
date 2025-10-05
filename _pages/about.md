@@ -7,50 +7,93 @@ redirect_from:
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. Incidentally, these same features make it a great template for anyone that needs to show off a professional template!
+<div class="about-container">
+  <!-- Introduction Section -->
+  <h2>Introduction</h2>
+  <p>
+    My name is <strong>Nguyen Viet Khanh</strong>, a senior student in the Automation and Control Program at the School of Electrical and Electronic Engineering, Hanoi University of Science and Technology (HUST). I have a strong academic background and hands-on research experience in motion control for mobile robots and intelligent control strategies. My long-term goal is to contribute to cutting-edge research in control systems and intelligent robotics, integrating machine learning and advanced control methodologies to develop robust and adaptive autonomous systems.
+  </p>
 
- You can fork [this template](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and Markdown files, add your own PDFs and other content, and have your own site for free, with no ads!
+  <!-- My Journey Section -->
+  <h2>My Journey into Control Engineering</h2>
+  <p>
+    Growing up in Hanoi, I developed an early fascination with control engineering. My first encounter was at the 2010 Honda Conference, where I witnessed the ASIMO <strong>humanoid robot</strong>. Its ability to perform tasks and interact with humans seemed like something out of science fiction, igniting my passion for robotics and intelligent systems.
+  </p>
+  <p>
+    In 2021, I began my undergraduate journey with the program <strong>Control Engineering and Automation</strong> at <strong>Hanoi University of Science and Technology</strong>. Transitioning to university during the COVID-19 pandemic was a challenging experience, but I adapted quickly. I joined the <strong>Mechatronic Engineering Group (MEG)</strong> laboratory to gain hands-on experience in research and control systems. This experience cemented my decision to dedicate myself fully to this field, a choice I consider one of the most fulfilling of my academic career. During this time, I explored advanced concepts and engaged in self-study, often staying up late, fueled by curiosity. This passion for learning resulted in several publications in prestigious journals and international conferences.
+  </p>
+  <p>
+    Fortunately, I had a 4-month internship at National Taiwan Normal University. This internship made me realize that I desire to seek an advanced research environment abroad to expand my horizon. And just like a dream come true, after receiving the IDEX scholarship at <strong>Université Paris Saclay</strong>, I am pursuing <strong>Master 2 Smart Aerospace and Autonomous System</strong>.
+  </p>
 
-A data-driven personal website
-======
-Like many other Jekyll-based GitHub Pages templates, Academic Pages makes you separate the website's content from its form. The content & metadata of your website are in structured Markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various Markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
+  <!-- Research Interests Section -->
+  <h2>Research Interests</h2>
+  <p>
+    As I look toward my future in the field of Automatic Control at the Department of Electrical Engineering, I am particularly drawn to the intersection of <strong>Robust Control</strong>, <strong>Predictive Control</strong>, and <strong>Neural Networks</strong>. My undergraduate research experiences have instilled in me a strong passion for <strong>Model Predictive Control (MPC)</strong> and <strong>Sliding Mode Control</strong> techniques for autonomous systems, as they provide a powerful framework for addressing uncertainties and constraints in dynamic environments.
+  </p>
+  <p>
+    My master’s program focuses on the mechanics and control of autonomous systems, such as <strong>unmanned aerial vehicle (UAV)</strong> and <strong>unmanned ground vehicle (UGV)</strong>. It provides a comprehensive foundation for understanding and designing intelligent machines by covering kinematic and dynamic modeling, system analysis, and advanced control methods.
+  </p>
 
-Many of the features of dynamic content management systems (like Wordpress) can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart's content without touching the content of your site. If you get to a point where you've broken something in Jekyll/HTML/CSS beyond repair, your Markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over - just be sure to save the Markdown files! You can also write scripts that process the structured data on the site, such as [this one](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb) that analyzes metadata in pages about talks to display [a map of every location you've given a talk](https://academicpages.github.io/talkmap.html).
+  <!-- Last Updated -->
+  <p class="cv-last-updated">
+    <strong>Last updated:</strong> <span id="last-updated"></span>
+  </p>
+</div>
 
-For those users that need more advanced functionality, the template also supports the following popular tools:
-- [MathJax](https://www.mathjax.org/) for mathematical equations
-- [Mermaid](https://mermaid.js.org/) for diagraming
-- [Plotly](https://plotly.com/javascript/) for plotting
+<style>
+/* Reuse CV container styling */
+.about-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+  line-height: 1.7;
+  text-align: justify; /* uniformly distributed text */
+}
 
-Getting started
-======
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this template](https://github.com/academicpages/academicpages.github.io) by clicking the "Use this template" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](http://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
+/* Light theme */
+body.light .about-container {
+  background-color: #ffffff;
+  color: #111111;
+  border: 1px solid #d1d5db;
+}
 
-Site-wide configuration
-------
-The main configuration file for the site is in the base directory in [_config.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_config.yml), which defines the content in the sidebars and other site-wide features. You will need to replace the default variables with ones about yourself and your site's github repository. The configuration file for the top menu is in [_data/navigation.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_data/navigation.yml). For example, if you don't have a portfolio or blog posts, you can remove those items from that navigation.yml file to remove them from the header. 
+/* Dark theme */
+body.dark .about-container {
+  background-color: #0f1724;
+  color: #e6eef8;
+  border: 1px solid #1f2937;
+}
 
-Create content & metadata
-------
-For site content, there is one Markdown file for each type of content, which are stored in directories like _publications, _talks, _posts, _teaching, or _pages. For example, each talk is a Markdown file in the [_talks directory](https://github.com/academicpages/academicpages.github.io/tree/master/_talks). At the top of each Markdown file is structured data in YAML about the talk, which the theme will parse to do lots of cool stuff. The same structured data about a talk is used to generate the list of talks on the [Talks page](https://academicpages.github.io/talks), each [individual page](https://academicpages.github.io/talks/2012-03-01-talk-1) for specific talks, the talks section for the [CV page](https://academicpages.github.io/cv), and the [map of places you've given a talk](https://academicpages.github.io/talkmap.html) (if you run this [python file](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.py) or [Jupyter notebook](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb), which creates the HTML for the map based on the contents of the _talks directory).
+/* Links */
+.about-container a {
+  color: inherit;
+  text-decoration: underline;
+}
 
-**Markdown generator**
+/* Headings styling */
+.about-container h2 {
+  border-bottom: 3px solid currentColor;
+  padding-bottom: 0.3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  text-align: left; /* headings left-aligned */
+}
 
-The repository includes [a set of Jupyter notebooks](https://github.com/academicpages/academicpages.github.io/tree/master/markdown_generator
-) that converts a CSV containing structured data about talks or presentations into individual Markdown files that will be properly formatted for the Academic Pages template. The sample CSVs in that directory are the ones I used to create my own personal website at stuartgeiger.com. My usual workflow is that I keep a spreadsheet of my publications and talks, then run the code in these notebooks to generate the Markdown files, then commit and push them to the GitHub repository.
+/* Last updated text */
+.cv-last-updated {
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+</style>
 
-How to edit your site's GitHub repository
-------
-Many people use a git client to create files on their local computer and then push them to GitHub's servers. If you are not familiar with git, you can directly edit these configuration and Markdown files directly in the github.com interface. Navigate to a file (like [this one](https://github.com/academicpages/academicpages.github.io/blob/master/_talks/2012-03-01-talk-1.md) and click the pencil icon in the top right of the content preview (to the right of the "Raw | Blame | History" buttons). You can delete a file by clicking the trashcan icon to the right of the pencil icon. You can also create new files or upload files by navigating to a directory and clicking the "Create new file" or "Upload files" buttons. 
-
-Example: editing a Markdown file for a talk
-![Editing a Markdown file for a talk](/images/editing-talk.png)
-
-For more info
-------
-More info about configuring Academic Pages can be found in [the guide](https://academicpages.github.io/markdown/), the [growing wiki](https://github.com/academicpages/academicpages.github.io/wiki), and you can always [ask a question on GitHub](https://github.com/academicpages/academicpages.github.io/discussions). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
+<script>
+const lastUpdatedElem = document.getElementById('last-updated');
+if (lastUpdatedElem) {
+  const lastModified = new Date(document.lastModified);
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  lastUpdatedElem.textContent = lastModified.toLocaleDateString(undefined, options);
+}
+</script>

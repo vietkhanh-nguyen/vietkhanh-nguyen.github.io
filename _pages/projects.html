@@ -7,6 +7,15 @@ author_profile: true
 {% include base_path %}
 
 <div class="cv-container">
+
+  <!-- Last Updated -->
+  <p class="cv-last-updated">
+    <strong>Last updated:</strong> <span id="last-updated"></span>
+    {% if site.author.github %}
+      - You can also find my projects on <a href="{{ site.author.github }}">my GitHub profile</a>.
+    {% endif %}
+  </p>
+
   <!-- Render projects by category -->
   {% if site.project_category %}
     {% for category in site.project_category %}
@@ -35,15 +44,6 @@ author_profile: true
       {% endunless %}
     {% endfor %}
   {% endif %}
-
-
-    <!-- Last Updated -->
-  <p class="cv-last-updated">
-    <strong>Last updated:</strong> <span id="last-updated"></span>
-  {% if site.author.googlescholar %}
-   - You can also find my projects on <a href="{{ site.author.github }}">my GitHub profile</a>.
-  {% endif %}
-  </p>
 
 </div>
 

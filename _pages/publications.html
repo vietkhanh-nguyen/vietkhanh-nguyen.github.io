@@ -8,6 +8,14 @@ author_profile: true
 
 <div class="cv-container">
 
+  <!-- Last Updated -->
+  <p class="publications-last-updated">
+    <strong>Last updated:</strong> <span id="last-updated"></span>
+  {% if site.author.googlescholar %}
+   - You can also find my articles on <a href="{{ site.author.googlescholar }}">my Google Scholar profile</a>.
+  {% endif %}
+  </p>
+
 
   <!-- Render publications -->
   {% if site.publication_category %}
@@ -31,13 +39,7 @@ author_profile: true
     {% endfor %}
   {% endif %}
 
-  <!-- Last Updated -->
-  <p class="cv-last-updated">
-    <strong>Last updated:</strong> <span id="last-updated"></span>
-  {% if site.author.googlescholar %}
-   - You can also find my articles on <a href="{{ site.author.googlescholar }}">my Google Scholar profile</a>.
-  {% endif %}
-  </p>
+
 
 </div>
 

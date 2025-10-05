@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Bachelor Graduation Thesis"
-category: books
+category: bachelor_project
 excerpt: "This thesis is my main research at the Department of Automation, School of Electrical Electronics, Hanoi University of Science and Technology (HUST)."
 date: 2025-06-18
 slidesurl: '/files/bachelor_thesis_presentation.pdf'

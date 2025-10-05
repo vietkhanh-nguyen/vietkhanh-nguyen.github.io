@@ -6,14 +6,89 @@ author_profile: true
 redirect_from:
   - /wordpress/blog-posts/
 ---
-
 {% include base_path %}
-{% capture written_year %}'None'{% endcapture %}
-{% for post in site.posts %}
-  {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-  {% if year != written_year %}
-    <h2 id="{{ year | slugify }}" class="archive__subtitle">{{ year }}</h2>
-    {% capture written_year %}{{ year }}{% endcapture %}
-  {% endif %}
-  {% include archive-single.html %}
-{% endfor %}
+
+<div class="cv-container">
+
+  {% capture written_year %}'None'{% endcapture %}
+
+  {% for post in site.posts %}
+    {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+    {% if year != written_year %}
+      <h2 class="publication-title" id="{{ year | slugify }}">{{ year }}</h2>
+      {% capture written_year %}{{ year }}{% endcapture %}
+    {% endif %}
+
+    {% include archive-single.html %}
+
+    {% unless forloop.last %}
+      <hr class="publication-separator" />
+    {% endunless %}
+  {% endfor %}
+
+</div>
+
+<style>
+/* CV container */
+.cv-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+  line-height: 1.6;
+  transition: all 0.3s ease;
+}
+
+/* Light theme */
+body.light .cv-container {
+  background-color: #ffffff;
+  color: #111111;
+  border: 1px solid #d1d5db;
+}
+
+/* Dark theme */
+body.dark .cv-container {
+  background-color: #0f1724;
+  color: #e6eef8;
+  border: 1px solid #1f2937;
+}
+
+/* Links */
+.cv-container a {
+  color: #007acc;
+  text-decoration: underline;
+}
+body.dark .cv-container a {
+  color: #66c0f4;
+}
+
+/* Year title styling (aligned with publications/projects) */
+.publication-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-top: 1.5rem;
+  margin-bottom: 0.3rem;
+  border-bottom: 3px solid currentColor;
+  padding-bottom: 0.2rem;
+}
+
+/* Separator styling */
+.publication-separator {
+  border: none;
+  border-bottom: 3px dashed #ccc;
+  margin: 0.5rem 0 1rem 0;
+}
+
+/* Dark mode adjustments */
+body.dark .publication-title {
+  border-color: #f2f5fa;
+}
+body.dark .publication-separator {
+  border-color: #555;
+}
+
+/* Wordwrap helper */
+.wordwrap {
+  margin-bottom: 1rem;
+}
+</style>

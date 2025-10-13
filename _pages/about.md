@@ -8,6 +8,10 @@ redirect_from:
 ---
 
 <div class="about-container">
+  <!-- Last Updated -->
+  <p class="about-last-updated">
+    <strong>Last updated:</strong> <span id="last-updated"></span>
+  </p>
   <!-- Introduction Section -->
   <h2>Introduction</h2>
   <p>
@@ -17,7 +21,7 @@ redirect_from:
   <!-- My Journey Section -->
   <h2>My Journey into Control Engineering</h2>
   <p>
-    Growing up in Hanoi, I developed an early fascination with control engineering. My first encounter was at the 2010 Honda Conference, where I witnessed the ASIMO <strong>humanoid robot</strong>. Its ability to perform tasks and interact with humans seemed like something out of science fiction, igniting my passion for robotics and intelligent systems.
+    Growing up in Hanoi, Vietnam, I developed an early fascination with control engineering. My first encounter was at the 2010 Honda Conference, where I witnessed the ASIMO <strong>humanoid robot</strong>. Its ability to perform tasks and interact with humans seemed like something out of science fiction, igniting my passion for robotics and intelligent systems.
   </p>
   <p>
     In 2021, I began my undergraduate journey with the program <strong>Control Engineering and Automation</strong> at <strong>Hanoi University of Science and Technology</strong>. Transitioning to university during the COVID-19 pandemic was a challenging experience, but I adapted quickly. I joined the <strong>Mechatronic Engineering Group (MEG)</strong> laboratory to gain hands-on experience in research and control systems. This experience cemented my decision to dedicate myself fully to this field, a choice I consider one of the most fulfilling of my academic career. During this time, I explored advanced concepts and engaged in self-study, often staying up late, fueled by curiosity. This passion for learning resulted in several publications in prestigious journals and international conferences.
@@ -29,15 +33,10 @@ redirect_from:
   <!-- Research Interests Section -->
   <h2>Research Interests</h2>
   <p>
-    As I look toward my future in the field of Automatic Control at the Department of Electrical Engineering, I am particularly drawn to the intersection of <strong>Robust Control</strong>, <strong>Predictive Control</strong>, and <strong>Neural Networks</strong>. My undergraduate research experiences have instilled in me a strong passion for <strong>Model Predictive Control (MPC)</strong> and <strong>Sliding Mode Control</strong> techniques for autonomous systems, as they provide a powerful framework for addressing uncertainties and constraints in dynamic environments.
+    As I look toward my future in the field of Automatic Control at the Department of Electrical Engineering, I am particularly drawn to the intersection of <strong>Robust Control</strong>, <strong>Predictive Control</strong>, and <strong>Neural Networks</strong>. My undergraduate research experiences have instilled in me a strong passion for <strong>Model Predictive Control (MPC)</strong> and <strong>Sliding Mode Control</strong> techniques for autonomous systems, as they provide a powerful framework for addressing uncertainties and constraints in dynamic environments. Also I really want to learn about novel <strong>Trajectory planning</strong> for robot.
   </p>
   <p>
     My master’s program focuses on the mechanics and control of autonomous systems, such as <strong>unmanned aerial vehicle (UAV)</strong> and <strong>unmanned ground vehicle (UGV)</strong>. It provides a comprehensive foundation for understanding and designing intelligent machines by covering kinematic and dynamic modeling, system analysis, and advanced control methods.
-  </p>
-
-  <!-- Last Updated -->
-  <p class="cv-last-updated">
-    <strong>Last updated:</strong> <span id="last-updated"></span>
   </p>
 </div>
 
@@ -83,7 +82,7 @@ body.dark .about-container {
 }
 
 /* Last updated text */
-.cv-last-updated {
+.about-last-updated {
   margin-bottom: 1.5rem;
   font-style: italic;
 }

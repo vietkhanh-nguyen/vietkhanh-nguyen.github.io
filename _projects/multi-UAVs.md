@@ -7,6 +7,7 @@ date: 2025-12-01
 slidesurl:
 paperurl: "files/projects/consensus_quadcopter_project/report_final.pdf"
 permalink: 
+thumbnail: "/files/projects/consensus_quadcopter_project/Multi-UAVs.png"
 ---
 
 Preface
@@ -30,9 +31,7 @@ Simualation result
     Your browser does not support the video tag.
   </video>
   <br>
-  <a href="/files/projects/consensus_quadcopter_project/mj_consensus_video.mp4" download style="display: inline-block; margin-top: 0.5em;">
-    ⬇ Download Consensus Video
-  </a>
+  <figcaption style="margin-top: 0.5em; font-style: italic;">Consensus control simulation</figcaption>
 </div>
 
 <div style="text-align: center; margin-bottom: 1em;">
@@ -41,9 +40,7 @@ Simualation result
     Your browser does not support the video tag.
   </video>
   <br>
-  <a href="/files/projects/consensus_quadcopter_project/mj_tracking_video.mp4" download style="display: inline-block; margin-top: 0.5em;">
-    ⬇ Download Tracking Video
-  </a>
+  <figcaption style="margin-top: 0.5em; font-style: italic;">Tracking control simulation</figcaption>
 </div>
 
 

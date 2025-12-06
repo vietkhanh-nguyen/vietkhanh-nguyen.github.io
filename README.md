@@ -61,3 +61,8 @@ This is my personal website, so contributions are limited to myself. However, fe
 ## 📜 License
 
 Content is available under [MIT License](LICENSE). Feel free to fork and adapt for personal use.
+
+## Fix bug video not display
+'''bash
+ffmpeg -i <your video>.mp4 -movflags faststart <new name>.mp4
+'''

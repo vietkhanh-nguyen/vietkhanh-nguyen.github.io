@@ -89,10 +89,11 @@ publication_category:
     title: 'Conference Papers'
 
 project_category:
-  bachelor_project:
-    title: 'Bachelor Project'
   master_project:
     title: 'Master Project'
+  bachelor_project:
+    title: 'Bachelor Project'
+
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews
